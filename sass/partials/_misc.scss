@@ -1,0 +1,186 @@
+
+img.centered,
+.aligncenter {
+  display: block;
+  margin: rem(10px auto 24px);
+}
+
+img.alignnone {
+  margin-bottom: rem(12px);
+}
+
+.alignleft {
+  float: left;
+  text-align: left;
+}
+
+.alignright {
+  float: right;
+  text-align: right;
+}
+
+img.alignleft,
+.wp-caption.alignleft {
+  margin: rem(0 24px 24px 0);
+}
+
+img.alignright,
+.wp-caption.alignright {
+  margin: rem(0 0 24px 24px);
+}
+
+.wp-caption {
+  max-width: 100%;
+}
+
+.wp-caption-text {
+  font-family: FreightSansMedium, $font-stack-1;
+  font-size: rem(12px);
+  text-align: center;
+  letter-spacing: .33px;
+  text-transform: uppercase;
+  line-height: 29px;
+}
+
+.gallery-caption {
+}
+
+.widget_calendar table {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.widget_calendar td,
+.widget_calendar th,
+.text-center {
+  text-align: center;
+}
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.small-hr {
+  display: block;
+  max-width: 25em;
+  border-top: 1px solid $gold;
+  margin: rem(30px auto);
+}
+
+.mobile-only {
+
+  display: none;
+  
+  @include breakpoint( $tablet ) {
+    display: block;
+  }
+}
+
+.desktop-only {
+  
+  @include breakpoint( $desk ) {
+    display: none;
+  }
+
+}
+
+.genesis-skip-link {
+  display: none;
+}
+
+.fl-builder {
+  &.logged-in {
+    .pp-advanced-menu .pp-off-canvas-menu {
+      top: rem(32px);
+      @include breakpoint($portrait) {
+        top: 32px;
+      }
+      @include breakpoint($tablet) {
+        top: 32px;
+      }
+      @include breakpoint($mobile) {
+        top: 46px;
+      }
+    }
+  }
+  .pp-advanced-menu {
+    .pp-off-canvas-menu {
+      width: rem(327px);
+      height: rem(832px);
+      background: #000000;
+      background-color: rgba(0,0,0, 0.65) !important;
+      .social-module {
+        position: absolute;
+        bottom: 0;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+      }
+      .pp-menu-close-btn {
+        float: right !important;
+        right: rem(10px) !important;
+        left: unset !important;
+        color: $white !important;
+        top: rem(13px) !important;
+      }
+      .menu {
+        padding: rem(20px 0 0 0) !important;
+        .menu-item {
+          &.pp-has-submenu {
+            .pp-has-submenu-container {
+              a {
+                .menu-item-text {
+                  position: relative;
+                }
+              }
+            }
+          }
+          &.current-menu-item {
+            a {
+              background: #3b3838;
+            }
+          }
+          a {
+            text-align: left;
+            padding: rem(10px 10px 10px 37px) !important;
+            font-size: rem(16px);
+            @include breakpoint($tablet) {
+              padding: 5px 5px 5px 37px !important;
+              font-size: 12px;
+            }
+            text-transform: uppercase;
+            &:hover {
+              background: #3b3838;
+            }
+            .pp-menu-toggle {
+              position: absolute;
+              right: rem(-18px);
+              float: none;
+              left: unset;
+            }
+          }
+          .sub-menu {
+            min-width: 100%;
+            li {
+              a {
+                font-size: rem(13px);
+                padding-left: 56px !important;
+                padding-top: 3px !important;
+                padding-bottom: 3px !important;
+                text-transform: none;
+                &:hover {
+                  background: #3b3838;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
